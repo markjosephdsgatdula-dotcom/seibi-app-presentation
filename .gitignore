@@ -1,0 +1,10 @@
+# Temporary files
+videos_temp/
+__pycache__/
+*.pyc
+
+# Local system configuration / IDEs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
