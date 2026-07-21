@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Seibi - Equipment Maintenance & Inspection Management Presentation">
-  <title>Seibi Presentation</title>
+  <meta name="description" content="Seibi - 設備点検・管理アプリケーション プレゼンテーション">
+  <title>Seibi 設備点検アプリ プレゼンテーション</title>
   
   <!-- Modern Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
       <span class="brand-text">Seibi</span>
     </div>
     <div class="slide-indicator">
-      <span id="current-slide-num">1</span> / <span id="total-slides-num">8</span>
+      <span id="current-slide-num">1</span> / <span id="total-slides-num">7</span>
     </div>
   </header>
 
@@ -41,77 +41,77 @@
       <div class="slide-content title-layout">
         <h1 class="logo-text">Seibi</h1>
         <h2 class="subtitle-text">設備管理システム</h2>
-        <p class="description-text">Equipment Maintenance & Inspection Management System</p>
+        <p class="description-text">設備点検・不具合管理のデジタル化からAIによる現場サポートまで</p>
         
         <div class="divider"></div>
         
         <div class="meta-info">
-          <p><span class="accent-color-green"><i class="fa-solid fa-circle-check"></i> Connected</span> | Premium Digital Solution</p>
-          <p class="author">Developed by Antigravity AI</p>
+          <p><span class="accent-color-green"><i class="fa-solid fa-circle-check"></i> Connected</span> | 運用開始に向けた最終評価版</p>
+          <p class="author">Antigravity AI によってカスタマイズ</p>
         </div>
         
         <div class="start-hint">
-          <span>Use <kbd>←</kbd> <kbd>→</kbd> keys or click controls to navigate</span>
+          <span>キーボードの <kbd>←</kbd> <kbd>→</kbd> キーまたは画面下のボタンでスライドを移動できます</span>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 2: The Challenge -->
+    <!-- SLIDE 2: The Challenge (経緯と従来の課題) -->
     <section class="slide" id="slide-2" data-slide="2">
       <div class="slide-content grid-layout">
         <div class="text-col">
-          <h2 class="slide-title accent-color-red"><i class="fa-solid fa-circle-exclamation"></i> The Challenge</h2>
-          <p class="slide-subtitle">Modern factories suffer from fragmented maintenance processes.</p>
+          <h2 class="slide-title accent-color-red"><i class="fa-solid fa-circle-exclamation"></i> 従来の課題 (経緯)</h2>
+          <p class="slide-subtitle">全て紙ベースでの点検運用がもたらす現場の限界</p>
           
           <div class="cards-container">
             <div class="card card-red">
               <div class="card-icon"><i class="fa-solid fa-eye-slash"></i></div>
               <div class="card-body">
-                <h3>Zero Visibility</h3>
-                <p>Managers cannot track real-time machine health rates, often leading to sudden breakdown cascades.</p>
+                <h3>点検履歴の散逸</h3>
+                <p>点検表は手書きで、提出後はファイル保管か処分のみ。後から検索できるデジタル記録がありませんでした。</p>
               </div>
             </div>
             <div class="card card-red">
               <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
               <div class="card-body">
-                <h3>Fragmented Checklists</h3>
-                <p>Manual paper sheets lead to incomplete checks, with no direct way to track daily tasks.</p>
+                <h3>繰り返す不具合の放置</h3>
+                <p>同じ設備で不具合が再発しても個人の記憶に頼るしかなく、修理が完了したかを追跡する仕組みも欠如していました。</p>
               </div>
             </div>
             <div class="card card-red">
               <div class="card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
               <div class="card-body">
-                <h3>Communication Lag</h3>
-                <p>Filing physical reports delays repair starts, leaving critical hardware unattended.</p>
+                <h3>情報のブラックボックス化</h3>
+                <p>点検結果を持つ本人以外には、稼働状況や前月・去年に起きた歴史的な設備データが見えませんでした。</p>
               </div>
             </div>
           </div>
         </div>
         
         <div class="text-col">
-          <h2 class="slide-title accent-color-green"><i class="fa-solid fa-circle-check"></i> The Seibi Solution</h2>
-          <p class="slide-subtitle">A digital-first, real-time coordination dashboard.</p>
+          <h2 class="slide-title accent-color-green"><i class="fa-solid fa-circle-check"></i> 本アプリのコンセプト</h2>
+          <p class="slide-subtitle">デジタル技術による「情報の蓄積・共有・AIサポート」</p>
           
           <div class="cards-container">
             <div class="card card-green">
               <div class="card-icon"><i class="fa-solid fa-chart-simple"></i></div>
               <div class="card-body">
-                <h3>Real-Time Metrics</h3>
-                <p>Get instant updates on daily tasks, active issues, and equipment health status.</p>
+                <h3>現場でのデジタル記録</h3>
+                <p>モバイル端末でその場で入力・提出。履歴をデジタル化し、いつでも過去の点検ログを検索可能にします。</p>
               </div>
             </div>
             <div class="card card-green">
               <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
               <div class="card-body">
-                <h3>Floor Map Integration</h3>
-                <p>Visual map shows where components are, check routing, and verify wiring instantly.</p>
+                <h3>リアルタイム連携</h3>
+                <p>不具合発見と同時に自動タスク化＆Slack通知。現場の状況が即座に関係者全員に同期されます。</p>
               </div>
             </div>
             <div class="card card-green">
-              <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+              <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
               <div class="card-body">
-                <h3>Connected Desk Flow</h3>
-                <p>Operators report issues, request repairs, and access AI-powered manuals directly on the floor.</p>
+                <h3>AIマニュアル相談役</h3>
+                <p>マニュアルをめくる手間を排除。普段の言葉で質問すれば、AIが該当箇所を提示しながら回答を返します。</p>
               </div>
             </div>
           </div>
@@ -119,40 +119,40 @@
       </div>
     </section>
 
-    <!-- SLIDE 3: Dashboard Overview -->
+    <!-- SLIDE 3: Dashboard Overview (点検作業のデジタル化) -->
     <section class="slide" id="slide-3" data-slide="3">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-gauge-high"></i> Worker Dashboard</h2>
-          <p class="slide-subtitle">Simple, clean, and highly action-oriented.</p>
+          <h2 class="slide-title"><i class="fa-solid fa-gauge-high"></i> 点検作業のデジタル化</h2>
+          <p class="slide-subtitle">その場で入力・提出、そして蓄積するデータ</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>Progress Meter</strong>
-                <span>Clear status circles tracking completed daily tasks (e.g. 0/13 completed).</span>
+                <strong>モバイル・デジタル点検表</strong>
+                <span>タブレットやスマートフォンを使って現場から直接提出。紙の手書き時間や転記ミスを解消します。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>Abnormality Counts</strong>
-                <span>Bold red indicators highlighting unresolved machine errors needing action.</span>
+                <strong>今日の作業ステータス一覧</strong>
+                <span>「今日のタスク進捗」(例：0/13件完了) などのダッシュボード機能でやるべきタスクが一目瞭然。</span>
               </div>
             </li>
             <li>
               <div class="list-num">03</div>
               <div class="list-text">
-                <strong>Equipment Health</strong>
-                <span>Continuous calculation of overall plant health (33% health rate).</span>
+                <strong>設備健全率の可視化</strong>
+                <span>工場内の稼働マシンと停止マシンの稼働比率から、全体の健全率をデジタル算出しリアルタイム提示。</span>
               </div>
             </li>
             <li>
               <div class="list-num">04</div>
               <div class="list-text">
-                <strong>Overdue Inspector Cards</strong>
-                <span>Color-coded alert cards for urgent inspections or active repairs.</span>
+                <strong>期限超過・要注意のアラート</strong>
+                <span>期限の過ぎた点検項目や直ちに修理が必要なタスクが、画面上で優先カードとしてハイライト表示されます。</span>
               </div>
             </li>
           </ul>
@@ -169,126 +169,85 @@
       </div>
     </section>
 
-    <!-- SLIDE 4: Interactive Wire Map -->
+    <!-- SLIDE 4: Interactive Wire Map & History (現場マップと点検履歴) -->
     <section class="slide" id="slide-4" data-slide="4">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-diagram-project"></i> Interactive Wire Map</h2>
-          <p class="slide-subtitle">Visual spatial intelligence for the factory floor.</p>
+          <h2 class="slide-title"><i class="fa-solid fa-diagram-project"></i> 工場マップと履歴ログ</h2>
+          <p class="slide-subtitle">ビジュアル化された配置図と過去の監査ログを完全連携</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>Floor Blueprint</strong>
-                <span>Maps out positions of TIG/CO2 Welders, Robots, Controllers, and Gas Tanks.</span>
+                <strong>インタラクティブ現場平面図</strong>
+                <span>溶接機や制御盤などのレイアウトを地図上で確認。異常マシンの設置場所をビジュアル特定します。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>Live Color Nodes</strong>
-                <span>Visual indicators highlighting components (e.g., Orange for robots, Cyan for weld tables).</span>
+                <strong>配線ルートのビジュアル化</strong>
+                <span>マップ上で対象のデバイスをタップするだけで、電源系統や接続配線を瞬時にトレースできます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">03</div>
               <div class="list-text">
-                <strong>Interactive Wiring</strong>
-                <span>Operators tap on components to inspect routing and control boards instantly.</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-num">04</div>
-              <div class="list-text">
-                <strong>Scheduled Routes</strong>
-                <span>Access scheduled inspection wiring paths with a single tap.</span>
+                <strong>検索可能な履歴・監査ログ</strong>
+                <span>過去の全ての点検日付、作業結果、担当者を保存。30日・90日や「異常あり」の条件で動的検索可能。</span>
               </div>
             </li>
           </ul>
-        </div>
-        
-        <div class="image-col">
-          <div class="image-frame">
-            <video autoplay loop muted playsinline>
-              <source src="videos/wire_map.webm" type="video/webm">
-            </video>
-            <div class="frame-reflection"></div>
+          
+          <!-- Auto video indicator -->
+          <div class="auto-video-info">
+            <i class="fa-solid fa-arrows-rotate"></i> <span>動画は「マップ確認」→「履歴ログ」と自動で切り替わります</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 5: Auditing & History -->
-    <section class="slide" id="slide-5" data-slide="5">
-      <div class="slide-content split-layout">
-        <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-clock-rotate-left"></i> History & Audit Logs</h2>
-          <p class="slide-subtitle">Comprehensive historical compliance logs.</p>
-          
-          <ul class="bullet-list">
-            <li>
-              <div class="list-num">01</div>
-              <div class="list-text">
-                <strong>Detailed Logs</strong>
-                <span>A complete chronologic feed of completed inspection entries.</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-num">02</div>
-              <div class="list-text">
-                <strong>Smart Filtering</strong>
-                <span>Filter entries dynamically by Date, Equipment, Timeframe (30-180 days), or Status.</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-num">03</div>
-              <div class="list-text">
-                <strong>Audit Readiness</strong>
-                <span>Ensures all regulatory inspection requirements are continuously captured.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
         
         <div class="image-col">
-          <div class="image-frame">
-            <video autoplay loop muted playsinline>
+          <div class="image-frame double-video-frame">
+            <video id="wiremap-video" class="autoplay-video active" muted playsinline>
+              <source src="videos/wire_map.webm" type="video/webm">
+            </video>
+            <video id="history-video" class="autoplay-video" muted playsinline>
               <source src="videos/history.webm" type="video/webm">
             </video>
             <div class="frame-reflection"></div>
+            <div class="video-badge" id="video-badge">ワイヤーマップ</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 6: Bulletin Board -->
-    <section class="slide" id="slide-6" data-slide="6">
+    <!-- SLIDE 5: Bulletin Board (状況共有とタスク通知) -->
+    <section class="slide" id="slide-5" data-slide="5">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-comments"></i> Collaborative Bulletin</h2>
-          <p class="slide-subtitle">Connecting operators and technicians instantly.</p>
+          <h2 class="slide-title"><i class="fa-solid fa-comments"></i> 状況のリアルタイム共有</h2>
+          <p class="slide-subtitle">伝え忘れ、連絡漏れを防ぐ自動連動タスク管理</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>Real-Time Feed</strong>
-                <span>Incident updates, safety notices, and maintenance requests are posted instantly.</span>
+                <strong>不具合時の自動タスク登録</strong>
+                <span>点検表で「異常あり」と回答すると、システムが自動で不具合状況を切り出し、修理タスクを作成します。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>One-Click Action</strong>
-                <span>Operators can click 'Start Repair' (修理開始) directly from the message cards.</span>
+                <strong>Slack自動通知による即座の共有</strong>
+                <span>重大な故障が検知された場合、現場からの報告を待つことなく社内チャットツールへアラートを自動通知。</span>
               </div>
             </li>
             <li>
               <div class="list-num">03</div>
               <div class="list-text">
-                <strong>Categorized Indicators</strong>
-                <span>Messages are labeled by urgency (e.g. Safety warnings, General info, Mechanical anomalies).</span>
+                <strong>リアルタイム対応意思表示</strong>
+                <span>タイムライン掲示板に表示された不具合カードの「修理開始」ボタンを押すだけで即座に現場で担当宣言。</span>
               </div>
             </li>
           </ul>
@@ -305,33 +264,33 @@
       </div>
     </section>
 
-    <!-- SLIDE 7: Maintenance Manuals & AI -->
-    <section class="slide" id="slide-7" data-slide="7">
+    <!-- SLIDE 6: Maintenance Manuals & AI (AIによる修理サポート) -->
+    <section class="slide" id="slide-6" data-slide="6">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-book-open"></i> AI-Powered Manuals</h2>
-          <p class="slide-subtitle">Instant guidance on the factory floor.</p>
+          <h2 class="slide-title"><i class="fa-solid fa-book-open"></i> AIによる修理サポート</h2>
+          <p class="slide-subtitle">紙のマニュアルを探す時間をゼロにする現場の相談相手</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>Search Interface</strong>
-                <span>Type in raw symptoms (e.g. "Robot arm shaking" or "J3 joint vibrating").</span>
+                <strong>自然言語によるスマート質問</strong>
+                <span>分厚いマニュアルのページを検索する代わりに、いつもの言葉で「アームが震えている」等と話しかけるだけ。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>AI Q&A integration</strong>
-                <span>Translates technical descriptions into specific, actionable local manuals.</span>
+                <strong>引用元付きマニュアル読解</strong>
+                <span>AIがアプリ内に登録されたマニュアルデータを即座に読み込み、引用元の項番や手順を示しながら回答します。</span>
               </div>
             </li>
             <li>
               <div class="list-num">03</div>
               <div class="list-text">
-                <strong>Structured Guides</strong>
-                <span>Quick-access guides grouped by hardware categories (Grinder, CO2 Welding Robot).</span>
+                <strong>現場での迅速な一次対応</strong>
+                <span>先輩技術者に電話や直接確認することなく、その場で瞬時に一次対処法や安全手順が判明します。</span>
               </div>
             </li>
           </ul>
@@ -348,40 +307,40 @@
       </div>
     </section>
 
-    <!-- SLIDE 8: Value Grid -->
-    <section class="slide" id="slide-8" data-slide="8">
+    <!-- SLIDE 7: Summary & Value (成果と今後の展望) -->
+    <section class="slide" id="slide-7" data-slide="7">
       <div class="slide-content value-layout">
-        <h2 class="slide-title value-title"><i class="fa-solid fa-chart-line"></i> The Value of Seibi</h2>
-        <p class="slide-subtitle value-subtitle">Transforming manual overhead into continuous uptime.</p>
+        <h2 class="slide-title value-title"><i class="fa-solid fa-chart-line"></i> 導入効果と今後の展望</h2>
+        <p class="slide-subtitle value-subtitle">アプリ開発は全て完了。本格運用とAIのさらなる高度化へ。</p>
         
         <div class="value-grid">
           <div class="value-card">
-            <div class="value-card-icon accent-blue"><i class="fa-solid fa-bolt"></i></div>
-            <h3>Operational Speed</h3>
-            <p>Technicians get mobile-first checklists, reducing admin time by up to 40%.</p>
+            <div class="value-card-icon accent-color-green"><i class="fa-solid fa-square-check"></i></div>
+            <h3>本格運用に向けた最終検証中</h3>
+            <p>システム開発およびアプリ本体の構築は全て完了。現在は現場導入に向けた最終フェーズです。</p>
           </div>
           
           <div class="value-card">
-            <div class="value-card-icon accent-red"><i class="fa-solid fa-heart-pulse"></i></div>
-            <h3>Predictive Response</h3>
-            <p>Immediate visibility on active anomalies stops minor warnings from turning into major line breakdowns.</p>
+            <div class="value-card-icon accent-color-blue"><i class="fa-solid fa-clock"></i></div>
+            <h3>見込まれる直接的効果</h3>
+            <p>履歴蓄積による「不具合の見える化」、自動アラートによる「初動の迅速化」、AI検索による「修理時間の短縮」が実現します。</p>
           </div>
           
           <div class="value-card">
-            <div class="value-card-icon accent-green"><i class="fa-solid fa-map"></i></div>
-            <h3>Spatial Clarity</h3>
-            <p>Floor maps visually connect logs to physical nodes, ensuring inspectors locate targets instantly.</p>
+            <div class="value-card-icon accent-color-red"><i class="fa-solid fa-book-medical"></i></div>
+            <h3>マニュアル対応機器の拡充</h3>
+            <p>現在対応している一部の機器に加え、工場内すべての主要マシンの手順書・図面データをAIへ順次読み込ませます。</p>
           </div>
           
           <div class="value-card">
-            <div class="value-card-icon accent-yellow"><i class="fa-solid fa-brain"></i></div>
-            <h3>Knowledge Portability</h3>
-            <p>AI troubleshooting embeds years of senior expertise directly in the pocket of junior operators.</p>
+            <div class="value-card-icon accent-color-yellow"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <h3>使うほど賢くなるAI学習ループ</h3>
+            <p>現場からの「質問ログ」と「役立ちフィードバック」を分析。良い回答を保持し、悪いものを排除して回答精度を高めます。</p>
           </div>
         </div>
         
         <div class="closing-statement">
-          <p>Seibi: Modernizing factory floor inspections, one robot at a time.</p>
+          <p>Seibi: 製造現場のダウンタイムをゼロにし、組織の保全力と稼働率を最大化するソリューション</p>
         </div>
       </div>
     </section>
@@ -391,9 +350,9 @@
   <!-- Global Footer Controls -->
   <footer class="global-footer">
     <div class="navigation-controls">
-      <button class="nav-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+      <button class="nav-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i> 前へ</button>
       <div class="slide-bullets" id="slide-bullets-container"></div>
-      <button class="nav-btn" id="next-btn">Next <i class="fa-solid fa-chevron-right"></i></button>
+      <button class="nav-btn" id="next-btn">次へ <i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="progress-bar-container">
       <div class="progress-bar" id="progress-bar-fill"></div>

@@ -19,29 +19,51 @@ async def run():
             await page.wait_for_timeout(2000)
             
             # Capture Slide 1 (Title)
-            slide1_path = 'web_slide_1.png'
-            await page.screenshot(path=slide1_path)
-            print(f"Captured Slide 1: {slide1_path}")
+            await page.screenshot(path='web_slide_1.png')
+            print("Captured Slide 1: web_slide_1.png")
             
-            # Click next to advance to Slide 2 (The Challenge)
-            print("Advancing to Slide 2...")
+            # Slide 2
             await page.click('#next-btn')
             await page.wait_for_timeout(2000)
+            await page.screenshot(path='web_slide_2.png')
+            print("Captured Slide 2: web_slide_2.png")
             
-            # Capture Slide 2
-            slide2_path = 'web_slide_2.png'
-            await page.screenshot(path=slide2_path)
-            print(f"Captured Slide 2: {slide2_path}")
-            
-            # Click next to check a slide with a screenshot embedded (Slide 3)
-            print("Advancing to Slide 3...")
+            # Slide 3
             await page.click('#next-btn')
             await page.wait_for_timeout(2000)
+            await page.screenshot(path='web_slide_3.png')
+            print("Captured Slide 3: web_slide_3.png")
             
-            # Capture Slide 3
-            slide3_path = 'web_slide_3.png'
-            await page.screenshot(path=slide3_path)
-            print(f"Captured Slide 3: {slide3_path}")
+            # Slide 4 - State 1: Wire Map
+            await page.click('#next-btn')
+            await page.wait_for_timeout(2000)
+            await page.screenshot(path='web_slide_4_wiremap.png')
+            print("Captured Slide 4 (Wire Map active): web_slide_4_wiremap.png")
+            
+            # Slide 4 - State 2: Wait for wiremap.webm to finish and transition to history.webm
+            # The wiremap video is about 4-5 seconds long. Let's wait 6 seconds.
+            print("Waiting for Slide 4 video to automatically transition...")
+            await page.wait_for_timeout(6000)
+            await page.screenshot(path='web_slide_4_history.png')
+            print("Captured Slide 4 (History Log active after transition): web_slide_4_history.png")
+            
+            # Slide 5
+            await page.click('#next-btn')
+            await page.wait_for_timeout(2000)
+            await page.screenshot(path='web_slide_5.png')
+            print("Captured Slide 5: web_slide_5.png")
+            
+            # Slide 6
+            await page.click('#next-btn')
+            await page.wait_for_timeout(2000)
+            await page.screenshot(path='web_slide_6.png')
+            print("Captured Slide 6: web_slide_6.png")
+            
+            # Slide 7
+            await page.click('#next-btn')
+            await page.wait_for_timeout(2000)
+            await page.screenshot(path='web_slide_7.png')
+            print("Captured Slide 7: web_slide_7.png")
             
         except Exception as e:
             print(f"An error occurred during verification: {e}")

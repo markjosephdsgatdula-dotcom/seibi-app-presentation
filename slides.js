@@ -28,6 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const bullets = document.querySelectorAll('.bullet');
 
+  // Slide 4 Dual-Video Setup
+  const wiremapVid = document.getElementById('wiremap-video');
+  const historyVid = document.getElementById('history-video');
+  const videoBadge = document.getElementById('video-badge');
+
+  if (wiremapVid && historyVid) {
+    // When the Wire Map video ends, switch to History Log video
+    wiremapVid.addEventListener('ended', () => {
+      wiremapVid.classList.remove('active');
+      historyVid.classList.add('active');
+      if (videoBadge) {
+        videoBadge.textContent = '履歴ログ';
+        videoBadge.classList.add('history-active');
+      }
+      historyVid.currentTime = 0;
+      historyVid.play().catch(err => console.log('Video autoplay blocked:', err));
+    });
+
+    // When the History Log video ends, switch back to Wire Map video
+    historyVid.addEventListener('ended', () => {
+      historyVid.classList.remove('active');
+      wiremapVid.classList.add('active');
+      if (videoBadge) {
+        videoBadge.textContent = 'ワイヤーマップ';
+        videoBadge.classList.remove('history-active');
+      }
+      wiremapVid.currentTime = 0;
+      wiremapVid.play().catch(err => console.log('Video autoplay blocked:', err));
+    });
+  }
+
   // Function to show/change slide
   function goToSlide(n) {
     if (n < 1 || n > totalSlides) return;
@@ -61,6 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update Progress Bar
     const progressPercent = (currentSlide / totalSlides) * 100;
     progressBarFill.style.width = `${progressPercent}%`;
+
+    // Manage Slide 4 dual-video playback
+    if (n === 4) {
+      if (wiremapVid && historyVid) {
+        wiremapVid.classList.add('active');
+        historyVid.classList.remove('active');
+        if (videoBadge) {
+          videoBadge.textContent = 'ワイヤーマップ';
+          videoBadge.classList.remove('history-active');
+        }
+        wiremapVid.currentTime = 0;
+        historyVid.currentTime = 0;
+        wiremapVid.play().catch(err => console.log('Video play blocked:', err));
+        historyVid.pause();
+      }
+    } else {
+      if (wiremapVid && historyVid) {
+        wiremapVid.pause();
+        historyVid.pause();
+      }
+    }
   }
 
   // Next / Prev Button Click handlers
