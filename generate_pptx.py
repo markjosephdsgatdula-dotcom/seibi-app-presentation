@@ -314,7 +314,7 @@ def create_presentation():
     tf1 = c1.text_frame
     tf1.word_wrap = True
     p1 = tf1.paragraphs[0]
-    p1.text = "📚 AI対応マニュアルの全社拡大"
+    p1.text = "📚 AI対応マニュアルの拡大"
     p1.font.name = FONT_TITLE
     p1.font.size = Pt(20)
     p1.font.bold = True
