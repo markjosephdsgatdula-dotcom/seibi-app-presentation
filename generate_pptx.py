@@ -285,7 +285,7 @@ def create_presentation():
     tf_right = right_box.text_frame
     tf_right.word_wrap = True
     p_right = tf_right.paragraphs[0]
-    p_right.text = "点検履歴分析（過去14日間）"
+    p_right.text = "点検履歴分析（過去5ヶ月間）"
     p_right.font.name = FONT_TITLE
     p_right.font.size = Pt(20)
     p_right.font.bold = True
@@ -295,7 +295,6 @@ def create_presentation():
     sim_data = [
         "🔴 ワイヤ送給のもたつき: 3回検出 [警告基準: 2回以上]",
         "🟡 ワイヤの滑り: 2回検出 [注意基準: 1回以上]",
-        "⚪ バーンバック (溶け上がり): 1回検出 [注意基準: 2回以上]",
         "🔧 推奨アクション: 点検記録より「もたつき」「滑り」の再発傾向を検知。金属粉による詰まりを防ぐため、次回の段取り替え時にライナー交換を推奨します。"
     ]
     add_bullets(tf_right, sim_data)
