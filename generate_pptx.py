@@ -75,7 +75,7 @@ def create_presentation():
     p.font.color.rgb = ACCENT_BLUE
     
     p2 = tf.add_paragraph()
-    p2.text = "設備管理システム — 設備点検アプリのご紹介"
+    p2.text = "設備点検・不具合管理アプリのご紹介"
     p2.font.name = FONT_TITLE
     p2.font.size = Pt(24)
     p2.font.color.rgb = TEXT_LIGHT
@@ -85,24 +85,24 @@ def create_presentation():
     sub_box = slide.shapes.add_textbox(Inches(1.0), Inches(4.5), Inches(11.333), Inches(1.5))
     tf_sub = sub_box.text_frame
     p_sub = tf_sub.paragraphs[0]
-    p_sub.text = "紙ベースの点検作業から、リアルタイム共有、AIによる現場修理サポートへ"
+    p_sub.text = "点検業務のデジタル化から、リアルタイム状況共有、AI修理サポートまで"
     p_sub.font.name = FONT_BODY
     p_sub.font.size = Pt(16)
     p_sub.font.color.rgb = TEXT_MUTED
     
     p_sub2 = tf_sub.add_paragraph()
-    p_sub2.text = "Antigravity AI によってカスタマイズ"
+    p_sub2.text = "溶接チーム マーク"
     p_sub2.font.name = FONT_BODY
     p_sub2.font.size = Pt(14)
     p_sub2.font.color.rgb = ACCENT_GREEN
     p_sub2.space_before = Pt(5)
 
     # ==========================================
-    # SLIDE 2: 経緯と従来の課題 (The Background)
+    # SLIDE 2: 1. 背景と課題 (The Background)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "1. 導入の経緯と従来の課題")
+    add_slide_header(slide, "1. 背景と課題")
     
     # Left Content - The Problem
     left_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(5.5), Inches(4.5))
@@ -117,9 +117,8 @@ def create_presentation():
     p.space_after = Pt(20)
     
     problems = [
-        "❌ 履歴が残らない: 全て手書きの紙で点検を行い、提出後はファイル保管か処分するのみで検索できない。",
-        "❌ 過去の状況が不明: 過去の不具合や前月・去年の状況を確認する手段がなかった。",
-        "❌ 状況のブラックボックス化: 点検表を持っている技術者本人以外には、設備の稼働・不具合状況が見えない。"
+        "❌ 点検履歴の散逸: 手書きの点検表は提出後にファイル保管されるか処分され、後から検索できるデジタル記録が残らない。",
+        "❌ 過去の状況確認不可: 過去にどんな不具合があったのか、先月や昨年に設備に何が起きたのかを確認する方法がない。"
     ]
     add_bullets(tf_left, problems)
 
@@ -136,24 +135,23 @@ def create_presentation():
     p_right.space_after = Pt(20)
     
     opportunities = [
-        "⚠️ 記憶頼みの点検: 同じ不具合が繰り返し起きていても、個人の記憶に頼らざるを得なかった。",
-        "⚠️ 修理状況の追跡不可: 不具合を発見しても、実際に修理が完了したかを追跡する仕組みがない。",
-        "⚠️ マニュアルの検索性悪化: 作業中に手順を確認する際、分厚い紙マニュアルをめくるか周りに聞くしかなかった。"
+        "⚠️ 繰り返す不具合の放置: 不具合が再発しても個人の記憶に頼るしかなく、不具合が修理されたかを追跡する仕組みもない。",
+        "⚠️ マニュアル参照の非効率: 修理中に手順を確認したい場合、分厚い紙マニュアルをめくるか周りに聞くしかない。"
     ]
     add_bullets(tf_right, opportunities)
 
     # ==========================================
-    # SLIDE 3: 点検作業のデジタル化 (Dashboard)
+    # SLIDE 3: 2. 解決策 (1) 点検業務のデジタル化: モバイル入力 (Digitalization)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (1) 点検作業のデジタル化")
+    add_slide_header(slide, "2. 解決策 (1) 点検業務のデジタル化")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
     tf_desc.word_wrap = True
     p = tf_desc.paragraphs[0]
-    p.text = "その場での入力と履歴蓄積"
+    p.text = "現場でのモバイル入力"
     p.font.name = FONT_TITLE
     p.font.size = Pt(20)
     p.font.bold = True
@@ -161,9 +159,8 @@ def create_presentation():
     p.space_after = Pt(15)
     
     bullets = [
-        "📱 モバイル端末での入力: タブレットやスマートフォンを使い、現場で即座に点検表を入力・提出可能。",
-        "🔍 検索可能な履歴保存: 提出されたデータは自動蓄積され、過去の不具合履歴をいつでも検索・確認できるように。",
-        "📊 稼働ダッシュボード: 今日のタスク進捗（例：0/13件完了）、異常発生件数、全体設備健全率を可視化。"
+        "📱 タブレットやスマホでの入力: 現場作業を行いながらその場から直接アプリに入力し提出可能。",
+        "🔒 データの安全な保存: 転記ミスや紛失を解消し、すべての点検結果は即座にデジタルデータとして安全に保存。"
     ]
     add_bullets(tf_desc, bullets)
     
@@ -172,17 +169,17 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
         
     # ==========================================
-    # SLIDE 4: 現場マップでの視覚的管理 (Wire Map)
+    # SLIDE 4: 2. 解決策 (1-追加) 検索可能な履歴ログ (History)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (2) 現場マップでの視覚的管理")
+    add_slide_header(slide, "2. 解決策 (1-追加) 検索可能な履歴ログ")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
     tf_desc.word_wrap = True
     p = tf_desc.paragraphs[0]
-    p.text = "グラフィカルな配線・配置の把握"
+    p.text = "設備ログのデータベース化"
     p.font.name = FONT_TITLE
     p.font.size = Pt(20)
     p.font.bold = True
@@ -190,38 +187,8 @@ def create_presentation():
     p.space_after = Pt(15)
     
     bullets = [
-        "🗺️ インタラクティブ平面図: 工場内の溶接機やロボット、制御盤、ガスタンク等の配置を地図上で確認可能。",
-        "🔌 配線ルートの確認: 設備をタップするだけで、給電や通信の配線ルートをビジュアル表示。",
-        "⚡ 直感的なトラブルシューティング: 異常が発生しているノードを素早く特定し、影響範囲を判断。"
-    ]
-    add_bullets(tf_desc, bullets)
-    
-    img_path = 'app_wire_map.png'
-    if os.path.exists(img_path):
-        slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
-
-    # ==========================================
-    # SLIDE 5: 履歴の自動蓄積と監査性 (History Log)
-    # ==========================================
-    slide = prs.slides.add_slide(blank_layout)
-    set_background(slide)
-    add_slide_header(slide, "2. 解決策 (3) 点検・修理履歴の監査ログ")
-    
-    desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
-    tf_desc = desc_box.text_frame
-    tf_desc.word_wrap = True
-    p = tf_desc.paragraphs[0]
-    p.text = "継続的なデータ追跡と改善"
-    p.font.name = FONT_TITLE
-    p.font.size = Pt(20)
-    p.font.bold = True
-    p.font.color.rgb = TEXT_LIGHT
-    p.space_after = Pt(15)
-    
-    bullets = [
-        "📋 包括的な履歴ログ: 過去に実施した点検結果、不具合の内容、作業担当者をタイムスタンプ付きで記録。",
-        "🔍 多彩なフィルタ機能: 日付順、設備順、期間（30日〜今年）やステータス（異常ありなど）で瞬時に絞り込み可能。",
-        "📈 修理進捗の追跡: 不具合に対する修理が完了しているかをデジタル上で管理し、対応漏れを防ぐ。"
+        "🔍 過去ログの動的検索: 過去の不具合履歴や点検結果を、日付や設備名から瞬時に呼び出せる検索機能を搭載。",
+        "📈 不具合履歴の可視化: 設備ごとに不具合発生パターンを蓄積し、同じトラブルの再発傾向をデジタル上で一目で把握。"
     ]
     add_bullets(tf_desc, bullets)
     
@@ -230,17 +197,17 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
 
     # ==========================================
-    # SLIDE 6: 状況のリアルタイム共有と通知 (Bulletin Board)
+    # SLIDE 5: 2. 解決策 (2) リアルタイム状況共有と管理 (Notice Board)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (4) リアルタイム状況共有・タスク化")
+    add_slide_header(slide, "2. 解決策 (2) 状況共有と管理")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
     tf_desc.word_wrap = True
     p = tf_desc.paragraphs[0]
-    p.text = "伝え忘れを防ぐ自動連携"
+    p.text = "連絡漏れを防ぐ自動連携"
     p.font.name = FONT_TITLE
     p.font.size = Pt(20)
     p.font.bold = True
@@ -248,9 +215,9 @@ def create_presentation():
     p.space_after = Pt(15)
     
     bullets = [
-        "🚨 自動タスク登録 & 通知: 不具合検知時、システムが自動的に修理タスクを作成し関係者に通知。",
-        "💬 チャット・掲示板機能: 異常内容に対して、現場から「修理開始 (修理開始)」ボタンで即座に担当宣言が可能。",
-        "🔗 社内連絡ツールとの自動連携: 重大な不具合の場合は、社内チャットツールへ自動で警告通知を送信。"
+        "⚙️ 自動タスク化: 点検表で「異常あり」と回答されると、システムが自動で修理タスクを作成し即座に登録。",
+        "🚨 LINE WORKSへの自動アラート: 重大な不具合が検知された場合、LINE WORKSへ自動で緊急通知を送信。",
+        "🔄 リアルタイム同期: 修理の状況や掲示板の内容が、すべてのデバイス（モバイル・PC）へリアルタイムに同期。"
     ]
     add_bullets(tf_desc, bullets)
     
@@ -259,17 +226,17 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
 
     # ==========================================
-    # SLIDE 7: AIによる修理サポート機能 (AI Manuals)
+    # SLIDE 6: 2. 解決策 (3) AI搭載の修理サポート機能 (AI Manuals)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (5) AIによる現場修理サポート")
+    add_slide_header(slide, "2. 解決策 (3) AI修理サポート")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
     tf_desc.word_wrap = True
     p = tf_desc.paragraphs[0]
-    p.text = "現場の相談相手としてのAI"
+    p.text = "現場の相談役としてのAI"
     p.font.name = FONT_TITLE
     p.font.size = Pt(20)
     p.font.bold = True
@@ -277,9 +244,9 @@ def create_presentation():
     p.space_after = Pt(15)
     
     bullets = [
-        "🤖 自然言語での質問: 分厚いマニュアルをめくる代わりに、普段の言葉で質問可能（例：「J3関節で異音、ロボットアームが震えている」）。",
-        "📖 引用元の提示: AIが関連するマニュアル部分を特定し、「どの箇所の記述か」を示しながら的確に回答。",
-        "⚙️ カテゴリ別の構成: グラインダやCO2溶接ロボットなどのハードウェアごとに整理された手順書へ素早くアクセス。"
+        "💬 自然言語でのスマート質問: 紙マニュアルをめくる代わりに、普段の言葉で質問可能（例：「ワイヤ送給がもたついている」）。",
+        "📖 引用元の提示: AIがマニュアルから関連箇所を読み取り、参照したページや項番を示しながら明確に回答。",
+        "⚡ トラブル一次対応の迅速化: 直接先輩社員に聞いたり、電話をする手間を省き、その場で即時に一次対処が可能。"
     ]
     add_bullets(tf_desc, bullets)
     
@@ -288,77 +255,105 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
 
     # ==========================================
-    # SLIDE 8: 成果と今後の展望 (Achievements & Outlook)
+    # SLIDE 7: 3. 今後の展望 (1) データ主導のメンテナンス (Predictive Maintenance)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "3. 成果と今後の展望")
+    add_slide_header(slide, "3. 今後の展望 (1) データ主導")
+    
+    # Left Content - Welding Case Study
+    left_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(5.5), Inches(4.5))
+    tf_left = left_box.text_frame
+    tf_left.word_wrap = True
+    p = tf_left.paragraphs[0]
+    p.text = "溶接機の予兆検知とスケジュール交換"
+    p.font.name = FONT_TITLE
+    p.font.size = Pt(20)
+    p.font.bold = True
+    p.font.color.rgb = TEXT_LIGHT
+    p.space_after = Pt(15)
+    
+    welding_bullets = [
+        "📊 長期トレンドの統計分析: 蓄積された履歴を基に長期的な故障サイクルを分析し、最適なスケジュールメンテナンスを実現。",
+        "🔩 溶接機コンジットライナー詰まり予測: 点検記録からワイヤ送給のもたつきや滑り、アーク切れの予兆を特定。",
+        "⚙️ ドライブロールの摩耗管理: 金属粉の蓄積やロール摩耗時期をデータで特定し、最適なタイミングで交換を実施してアーク停止を防止。"
+    ]
+    add_bullets(tf_left, welding_bullets)
+
+    # Right Content - Simulated dashboard card
+    right_box = slide.shapes.add_textbox(Inches(6.8), Inches(1.8), Inches(5.5), Inches(4.5))
+    tf_right = right_box.text_frame
+    tf_right.word_wrap = True
+    p_right = tf_right.paragraphs[0]
+    p_right.text = "予防保全の状態監視（シミュレーション値）"
+    p_right.font.name = FONT_TITLE
+    p_right.font.size = Pt(20)
+    p_right.font.bold = True
+    p_right.font.color.rgb = ACCENT_BLUE
+    p_right.space_after = Pt(20)
+    
+    sim_data = [
+        "⚡ コンジットライナー金属粉量: 0.85g [警告値: 0.70g]",
+        "⚠️ ワイヤ送給負荷 (トルク): 14.2 N·m [注意値: 12.0 N·m]",
+        "🔧 推奨アクション: 次の段取り替え時にコンジットライナー交換を推奨 (予測限界まであと24稼働時間)"
+    ]
+    add_bullets(tf_right, sim_data)
+
+    # ==========================================
+    # SLIDE 8: 3. 今後の展望 (2 & 3) AIマニュアルの拡大 ＆ 使うほど賢くなるAI
+    # ==========================================
+    slide = prs.slides.add_slide(blank_layout)
+    set_background(slide)
+    add_slide_header(slide, "3. 今後の展望 (2 & 3) AI機能の高度化")
     
     box_w = Inches(5.5)
     box_h = Inches(2.2)
     
-    # Card 1: Current Status & Direct Benefits
+    # Card 1: AI manual expansion
     c1 = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), box_w, box_h)
     tf1 = c1.text_frame
     tf1.word_wrap = True
     p1 = tf1.paragraphs[0]
-    p1.text = "🚀 現在のステータスと導入効果"
+    p1.text = "📚 AI対応マニュアルの全社拡大"
     p1.font.name = FONT_TITLE
     p1.font.size = Pt(20)
     p1.font.bold = True
-    p1.font.color.rgb = ACCENT_GREEN
+    p1.font.color.rgb = ACCENT_BLUE
     p1.space_after = Pt(10)
     add_bullets(tf1, [
-        "開発はすべて完了し、現在は本格運用に向けた最終確認段階。",
-        "紙廃止による履歴の蓄積、自動通知による迅速な初動、マニュアル検索時間のゼロ化による修理時間の大幅短縮を見込む。"
+        "一部の設備だけでなく、工場内のすべての主要設備の手順書・図面データをAIへ順次取り込み、サポート範囲を全域へ拡大。"
     ])
     
-    # Card 2: AI manual expansion
+    # Card 2: Self-improving AI
     c2 = slide.shapes.add_textbox(Inches(6.8), Inches(1.8), box_w, box_h)
     tf2 = c2.text_frame
     tf2.word_wrap = True
     p2 = tf2.paragraphs[0]
-    p2.text = "📚 AI対応マニュアルの拡充"
+    p2.text = "🔄 使うほど賢くなるAI学習ループ"
     p2.font.name = FONT_TITLE
     p2.font.size = Pt(20)
     p2.font.bold = True
-    p2.font.color.rgb = ACCENT_BLUE
+    p2.font.color.rgb = ACCENT_GREEN
     p2.space_after = Pt(10)
     add_bullets(tf2, [
-        "現在は一部の設備のみ対応しているマニュアルの範囲を広げ、工場内のすべての主要設備でAIサポートを利用可能に。"
+        "質問ログと「役に立ったか」の評価を記録。良質な回答を学習し、不要なものを除いて回答精度を高める仕組みを構築。"
     ])
     
-    # Card 3: Self-improving AI
-    c3 = slide.shapes.add_textbox(Inches(0.75), Inches(4.3), box_w, box_h)
+    # Card 3: Executive Closing
+    c3 = slide.shapes.add_textbox(Inches(0.75), Inches(4.3), Inches(11.833), Inches(2.0))
     tf3 = c3.text_frame
     tf3.word_wrap = True
     p3 = tf3.paragraphs[0]
-    p3.text = "📈 使うほど賢くなるAIフィードバック"
+    p3.text = "💡 まとめ"
     p3.font.name = FONT_TITLE
     p3.font.size = Pt(20)
     p3.font.bold = True
-    p3.font.color.rgb = ACCENT_RED
+    p3.font.color.rgb = TEXT_LIGHT
     p3.space_after = Pt(10)
     add_bullets(tf3, [
-        "技術者がAIにした質問と、その回答が役に立ったかどうかのフィードバックをログ化。",
-        "有効な回答パターンを蓄積し、現場の利用実績に応じてAIの回答精度が自動で向上するエコシステムを構築。"
+        "このアプリは単なる点検表のデジタル化ではありません。現場がより安全に働き、故障を防ぎ、設備を最高の状態で稼働させ続けるためのツールです。"
     ])
     
-    # Card 4: Executive Closing
-    c4 = slide.shapes.add_textbox(Inches(6.8), Inches(4.3), box_w, box_h)
-    tf4 = c4.text_frame
-    tf4.word_wrap = True
-    p4 = tf4.paragraphs[0]
-    p4.text = "💡 今後の展望"
-    p4.font.name = FONT_TITLE
-    p4.font.size = Pt(20)
-    p4.font.bold = True
-    p4.font.color.rgb = TEXT_LIGHT
-    p4.space_after = Pt(10)
-    add_bullets(tf4, [
-        "設備のダウンタイムを最小化し、保全業務のナレッジを組織的に共有・蓄積することで、工場稼働率の圧倒的向上を目指します。"
-    ])
-
     # Save presentation
     output_path = 'seibi_presentation.pptx'
     prs.save(output_path)

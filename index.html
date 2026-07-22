@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Seibi - 設備点検・管理アプリケーション プレゼンテーション">
+  <meta name="description" content="Seibi - 設備点検・不具合管理アプリケーション プレゼンテーション">
   <title>Seibi 設備点検アプリ プレゼンテーション</title>
   
   <!-- Modern Google Font -->
@@ -29,7 +29,7 @@
       <span class="brand-text">Seibi</span>
     </div>
     <div class="slide-indicator">
-      <span id="current-slide-num">1</span> / <span id="total-slides-num">7</span>
+      <span id="current-slide-num">1</span> / <span id="total-slides-num">8</span>
     </div>
   </header>
 
@@ -40,8 +40,8 @@
     <section class="slide active" id="slide-1" data-slide="1">
       <div class="slide-content title-layout">
         <h1 class="logo-text">Seibi</h1>
-        <h2 class="subtitle-text">設備管理システム</h2>
-        <p class="description-text">設備点検・不具合管理のデジタル化からAIによる現場サポートまで</p>
+        <h2 class="subtitle-text">設備点検アプリのご紹介</h2>
+        <p class="description-text">点検のデジタル化からAIによる修理サポートまで</p>
         
         <div class="divider"></div>
         
@@ -49,110 +49,61 @@
           <p><span class="accent-color-green"><i class="fa-solid fa-circle-check"></i> Connected</span> | 運用開始に向けた最終評価版</p>
           <p class="author">Antigravity AI によってカスタマイズ</p>
         </div>
-        
-        <div class="start-hint">
-          <span>キーボードの <kbd>←</kbd> <kbd>→</kbd> キーまたは画面下のボタンでスライドを移動できます</span>
-        </div>
       </div>
     </section>
 
-    <!-- SLIDE 2: The Challenge (経緯と従来の課題) -->
+    <!-- SLIDE 2: 1. 背景と課題 (Background) -->
     <section class="slide" id="slide-2" data-slide="2">
-      <div class="slide-content grid-layout">
-        <div class="text-col">
-          <h2 class="slide-title accent-color-red"><i class="fa-solid fa-circle-exclamation"></i> 従来の課題 (経緯)</h2>
-          <p class="slide-subtitle">全て紙ベースでの点検運用がもたらす現場の限界</p>
-          
-          <div class="cards-container">
-            <div class="card card-red">
-              <div class="card-icon"><i class="fa-solid fa-eye-slash"></i></div>
-              <div class="card-body">
-                <h3>点検履歴の散逸</h3>
-                <p>点検表は手書きで、提出後はファイル保管か処分のみ。後から検索できるデジタル記録がありませんでした。</p>
-              </div>
-            </div>
-            <div class="card card-red">
-              <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
-              <div class="card-body">
-                <h3>繰り返す不具合の放置</h3>
-                <p>同じ設備で不具合が再発しても個人の記憶に頼るしかなく、修理が完了したかを追跡する仕組みも欠如していました。</p>
-              </div>
-            </div>
-            <div class="card card-red">
-              <div class="card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
-              <div class="card-body">
-                <h3>情報のブラックボックス化</h3>
-                <p>点検結果を持つ本人以外には、稼働状況や前月・去年に起きた歴史的な設備データが見えませんでした。</p>
-              </div>
+      <div class="slide-content value-layout">
+        <h2 class="slide-title accent-color-red"><i class="fa-solid fa-circle-exclamation"></i> 1. 背景と課題</h2>
+        <p class="slide-subtitle">紙ベースでの点検運用がもたらす現場の限界</p>
+        
+        <div class="background-grid">
+          <div class="card card-red">
+            <div class="card-icon"><i class="fa-solid fa-eye-slash"></i></div>
+            <div class="card-body">
+              <h3>点検履歴の散逸</h3>
+              <p>手書きの点検表は提出後にファイル保管されるか処分され、後から検索できるデジタル記録が残らない状態でした。</p>
             </div>
           </div>
-        </div>
-        
-        <div class="text-col">
-          <h2 class="slide-title accent-color-green"><i class="fa-solid fa-circle-check"></i> 本アプリのコンセプト</h2>
-          <p class="slide-subtitle">デジタル技術による「情報の蓄積・共有・AIサポート」</p>
-          
-          <div class="cards-container">
-            <div class="card card-green">
-              <div class="card-icon"><i class="fa-solid fa-chart-simple"></i></div>
-              <div class="card-body">
-                <h3>現場でのデジタル記録</h3>
-                <p>モバイル端末でその場で入力・提出。履歴をデジタル化し、いつでも過去の点検ログを検索可能にします。</p>
-              </div>
+          <div class="card card-red">
+            <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+            <div class="card-body">
+              <h3>繰り返す不具合の放置</h3>
+              <p>同じ不具合が繰り返し発生しても個人の記憶に頼るしかなく、不具合が実際に修理されたかを追跡する仕組みもありませんでした。</p>
             </div>
-            <div class="card card-green">
-              <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
-              <div class="card-body">
-                <h3>リアルタイム連携</h3>
-                <p>不具合発見と同時に自動タスク化＆Slack通知。現場の状況が即座に関係者全員に同期されます。</p>
-              </div>
-            </div>
-            <div class="card card-green">
-              <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-              <div class="card-body">
-                <h3>AIマニュアル相談役</h3>
-                <p>マニュアルをめくる手間を排除。普段の言葉で質問すれば、AIが該当箇所を提示しながら回答を返します。</p>
-              </div>
+          </div>
+          <div class="card card-red">
+            <div class="card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+            <div class="card-body">
+              <h3>マニュアル参照の非効率</h3>
+              <p>修理作業中に作業員が手順を確認したい場合、分厚い紙のマニュアルをめくるか、周りの人に聞くしか選択肢がありませんでした。</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 3: Dashboard Overview (点検作業のデジタル化) -->
+    <!-- SLIDE 3: 2. 解決策 (1) 点検業務のデジタル化: モバイル入力 (Digitalization) -->
     <section class="slide" id="slide-3" data-slide="3">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-gauge-high"></i> 点検作業のデジタル化</h2>
-          <p class="slide-subtitle">その場で入力・提出、そして蓄積するデータ</p>
+          <h2 class="slide-title"><i class="fa-solid fa-tablet-screen-button"></i> 2. 解決策 (1) 点検業務のデジタル化</h2>
+          <p class="slide-subtitle">現場の点検作業をペーパーレス化しデータをその場で記録</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>モバイル・デジタル点検表</strong>
-                <span>タブレットやスマートフォンを使って現場から直接提出。紙の手書き時間や転記ミスを解消します。</span>
+                <strong>現場でのモバイル入力</strong>
+                <span>タブレットやスマートフォンを使用し、点検作業を行いながらその場から直接アプリに入力・提出できます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>今日の作業ステータス一覧</strong>
-                <span>「今日のタスク進捗」(例：0/13件完了) などのダッシュボード機能でやるべきタスクが一目瞭然。</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-num">03</div>
-              <div class="list-text">
-                <strong>設備健全率の可視化</strong>
-                <span>工場内の稼働マシンと停止マシンの稼働比率から、全体の健全率をデジタル算出しリアルタイム提示。</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-num">04</div>
-              <div class="list-text">
-                <strong>期限超過・要注意のアラート</strong>
-                <span>期限の過ぎた点検項目や直ちに修理が必要なタスクが、画面上で優先カードとしてハイライト表示されます。</span>
+                <strong>データの安全な保存</strong>
+                <span>手書き点検表の転記ミスや紛失を解消。提出されたすべての点検内容は即座にデジタルデータとして安全に保存されます。</span>
               </div>
             </li>
           </ul>
@@ -169,85 +120,69 @@
       </div>
     </section>
 
-    <!-- SLIDE 4: Interactive Wire Map & History (現場マップと点検履歴) -->
+    <!-- SLIDE 4: 2. 解決策 (1-追加) 検索可能な履歴ログ (History) -->
     <section class="slide" id="slide-4" data-slide="4">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-diagram-project"></i> 工場マップと履歴ログ</h2>
-          <p class="slide-subtitle">ビジュアル化された配置図と過去の監査ログを完全連携</p>
+          <h2 class="slide-title"><i class="fa-solid fa-database"></i> 2. 解決策 (1-追加) 検索可能な履歴ログ</h2>
+          <p class="slide-subtitle">過去の不具合履歴や点検ログをいつでも呼び出せる状態に</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>インタラクティブ現場平面図</strong>
-                <span>溶接機や制御盤などのレイアウトを地図上で確認。異常マシンの設置場所をビジュアル特定します。</span>
+                <strong>いつでも確認できる設備状況</strong>
+                <span>過去にどんな不具合があったのか、先月や昨年に設備に何が起きたのかを検索機能から瞬時に確認できます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>配線ルートのビジュアル化</strong>
-                <span>マップ上で対象のデバイスをタップするだけで、電源系統や接続配線を瞬時にトレースできます。</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-num">03</div>
-              <div class="list-text">
-                <strong>検索可能な履歴・監査ログ</strong>
-                <span>過去の全ての点検日付、作業結果、担当者を保存。30日・90日や「異常あり」の条件で動的検索可能。</span>
+                <strong>不具合履歴の可視化</strong>
+                <span>紙ベースでは不可能だった「点検履歴の蓄積」が初めて実現。設備ごとの不具合発生パターンを追跡可能です。</span>
               </div>
             </li>
           </ul>
-          
-          <!-- Auto video indicator -->
-          <div class="auto-video-info">
-            <i class="fa-solid fa-arrows-rotate"></i> <span>動画は「マップ確認」→「履歴ログ」と自動で切り替わります</span>
-          </div>
         </div>
         
         <div class="image-col">
-          <div class="image-frame double-video-frame">
-            <video id="wiremap-video" class="autoplay-video active" muted playsinline>
-              <source src="videos/wire_map.webm" type="video/webm">
-            </video>
-            <video id="history-video" class="autoplay-video" muted playsinline>
+          <div class="image-frame">
+            <video autoplay loop muted playsinline>
               <source src="videos/history.webm" type="video/webm">
             </video>
             <div class="frame-reflection"></div>
-            <div class="video-badge" id="video-badge">ワイヤーマップ</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 5: Bulletin Board (状況共有とタスク通知) -->
+    <!-- SLIDE 5: 2. 解決策 (2) リアルタイムの状況共有と管理 (Notice Board) -->
     <section class="slide" id="slide-5" data-slide="5">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-comments"></i> 状況のリアルタイム共有</h2>
-          <p class="slide-subtitle">伝え忘れ、連絡漏れを防ぐ自動連動タスク管理</p>
+          <h2 class="slide-title"><i class="fa-solid fa-comments"></i> 2. 解決策 (2) 状況共有と管理</h2>
+          <p class="slide-subtitle">自動タスク登録とLINE WORKS通知で連絡漏れを防ぐ</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
                 <strong>不具合時の自動タスク登録</strong>
-                <span>点検表で「異常あり」と回答すると、システムが自動で不具合状況を切り出し、修理タスクを作成します。</span>
+                <span>点検表で「異常あり」と回答されると、自動的に修理タスクが登録され、誰が対応すべきかが即座に可視化されます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>Slack自動通知による即座の共有</strong>
-                <span>重大な故障が検知された場合、現場からの報告を待つことなく社内チャットツールへアラートを自動通知。</span>
+                <strong>LINE WORKS への自動アラート</strong>
+                <span>重大な不具合が検知された場合、現場からの報告忘れを防ぐため、LINE WORKSへ自動で緊急通知が送信されます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">03</div>
               <div class="list-text">
-                <strong>リアルタイム対応意思表示</strong>
-                <span>タイムライン掲示板に表示された不具合カードの「修理開始」ボタンを押すだけで即座に現場で担当宣言。</span>
+                <strong>タスクのリアルタイム同期</strong>
+                <span>修理の進捗状況や掲示板のやり取りが、すべてのデバイス（モバイル・PC）へリアルタイムに反映・同期されます。</span>
               </div>
             </li>
           </ul>
@@ -264,33 +199,33 @@
       </div>
     </section>
 
-    <!-- SLIDE 6: Maintenance Manuals & AI (AIによる修理サポート) -->
+    <!-- SLIDE 6: 2. 解決策 (3) AI搭載の修理サポート機能 (AI Manuals) -->
     <section class="slide" id="slide-6" data-slide="6">
       <div class="slide-content split-layout">
         <div class="text-col">
-          <h2 class="slide-title"><i class="fa-solid fa-book-open"></i> AIによる修理サポート</h2>
-          <p class="slide-subtitle">紙のマニュアルを探す時間をゼロにする現場の相談相手</p>
+          <h2 class="slide-title"><i class="fa-solid fa-brain"></i> 2. 解決策 (3) AI修理サポート</h2>
+          <p class="slide-subtitle">現場ですぐに頼れるAIアドバイザー機能</p>
           
           <ul class="bullet-list">
             <li>
               <div class="list-num">01</div>
               <div class="list-text">
-                <strong>自然言語によるスマート質問</strong>
-                <span>分厚いマニュアルのページを検索する代わりに、いつもの言葉で「アームが震えている」等と話しかけるだけ。</span>
+                <strong>自然言語での質問応答</strong>
+                <span>紙のマニュアルを探してめくる代わりに、普段使っている言葉でAIに修理手順や原因を直接質問できます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">02</div>
               <div class="list-text">
-                <strong>引用元付きマニュアル読解</strong>
-                <span>AIがアプリ内に登録されたマニュアルデータを即座に読み込み、引用元の項番や手順を示しながら回答します。</span>
+                <strong>明確な引用元の提示</strong>
+                <span>AIは該当マニュアルを解析し、根拠となるページや項番示しながら回答するため、安心して作業を行えます。</span>
               </div>
             </li>
             <li>
               <div class="list-num">03</div>
               <div class="list-text">
-                <strong>現場での迅速な一次対応</strong>
-                <span>先輩技術者に電話や直接確認することなく、その場で瞬時に一次対処法や安全手順が判明します。</span>
+                <strong>修理時間の短縮と自立化</strong>
+                <span>先輩社員に直接聞いたり電話したりする手間を省き、現場にいるその場で一次対応が迅速に完了します。</span>
               </div>
             </li>
           </ul>
@@ -307,40 +242,88 @@
       </div>
     </section>
 
-    <!-- SLIDE 7: Summary & Value (成果と今後の展望) -->
+    <!-- SLIDE 7: 3. 今後の展望 (1) データ主導のメンテナンス (Predictive Maintenance) -->
     <section class="slide" id="slide-7" data-slide="7">
+      <div class="slide-content split-layout">
+        <div class="text-col">
+          <h2 class="slide-title"><i class="fa-solid fa-chart-line"></i> 3. 今後の展望 (1) データ主導</h2>
+          <p class="slide-subtitle">不具合データから未来の故障を予測し未然に防ぐ</p>
+          
+          <ul class="bullet-list">
+            <li>
+              <div class="list-num">01</div>
+              <div class="list-text">
+                <strong>長期トレンドの統計分析</strong>
+                <span>蓄積された点検・修理のデジタルデータを分析し、設備の摩耗サイクルやメンテナンス時期を事前に予測します。</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-num">02</div>
+              <div class="list-text">
+                <strong>溶接機の予防保全ケーススタディ</strong>
+                <span>ワイヤ送給のもたつきや滑り、アーク切れの予兆を捉え、金属粉によるコンジットライナーの詰まり時期を特定します。</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-num">03</div>
+              <div class="list-text">
+                <strong>スケジュール交換による品質安定</strong>
+                <span>最適な時期にライナーやロールを交換し、ワイヤ張力を自動調整することで、駆動モーター保護と溶接品質を維持します。</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="image-col">
+          <div class="welding-demo-card">
+            <div class="demo-card-header">
+              <i class="fa-solid fa-bolt"></i> 溶接機 状態監視 (シミュレーション値)
+            </div>
+            <div class="demo-card-body">
+              <div class="stat-row">
+                <span class="stat-label">コンジットライナー金属粉量:</span>
+                <span class="stat-val val-danger">0.85g (警告値 0.70g)</span>
+              </div>
+              <div class="progress-bar-light"><div class="progress-fill-light fill-danger" style="width: 85%"></div></div>
+              
+              <div class="stat-row" style="margin-top: 1rem;">
+                <span class="stat-label">ワイヤ送給負荷 (トルク):</span>
+                <span class="stat-val val-warning">14.2 N·m (注意値 12.0 N·m)</span>
+              </div>
+              <div class="progress-bar-light"><div class="progress-fill-light fill-warning" style="width: 70%"></div></div>
+
+              <div class="predictive-action">
+                <div class="action-title"><i class="fa-solid fa-wrench"></i> 推奨アクション:</div>
+                <p>次の段取り替え時にコンジットライナー交換を推奨 (予測限界まであと24稼働時間)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: 3. 今後の展望 (2 & 3) AIマニュアルの拡大 ＆ 使うほど賢くなるAI -->
+    <section class="slide" id="slide-8" data-slide="8">
       <div class="slide-content value-layout">
-        <h2 class="slide-title value-title"><i class="fa-solid fa-chart-line"></i> 導入効果と今後の展望</h2>
-        <p class="slide-subtitle value-subtitle">アプリ開発は全て完了。本格運用とAIのさらなる高度化へ。</p>
+        <h2 class="slide-title value-title"><i class="fa-solid fa-circle-nodes"></i> 3. 今後の展望 (2 & 3)</h2>
+        <p class="slide-subtitle value-subtitle">AIマニュアルの全設備カバーとAI学習ループの確立</p>
         
         <div class="value-grid">
           <div class="value-card">
-            <div class="value-card-icon accent-color-green"><i class="fa-solid fa-square-check"></i></div>
-            <h3>本格運用に向けた最終検証中</h3>
-            <p>システム開発およびアプリ本体の構築は全て完了。現在は現場導入に向けた最終フェーズです。</p>
+            <div class="value-card-icon accent-color-blue"><i class="fa-solid fa-file-medical"></i></div>
+            <h3>AI対応マニュアルの全社拡大</h3>
+            <p>一部の機器だけでなく、工場内のすべての主要設備の手順書・図面データをAIへ順次取り込み、全域をサポート可能にします。</p>
           </div>
           
           <div class="value-card">
-            <div class="value-card-icon accent-color-blue"><i class="fa-solid fa-clock"></i></div>
-            <h3>見込まれる直接的効果</h3>
-            <p>履歴蓄積による「不具合の見える化」、自動アラートによる「初動の迅速化」、AI検索による「修理時間の短縮」が実現します。</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-card-icon accent-color-red"><i class="fa-solid fa-book-medical"></i></div>
-            <h3>マニュアル対応機器の拡充</h3>
-            <p>現在対応している一部の機器に加え、工場内すべての主要マシンの手順書・図面データをAIへ順次読み込ませます。</p>
-          </div>
-          
-          <div class="value-card">
-            <div class="value-card-icon accent-color-yellow"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <div class="value-card-icon accent-color-green"><i class="fa-solid fa-rotate"></i></div>
             <h3>使うほど賢くなるAI学習ループ</h3>
-            <p>現場からの「質問ログ」と「役立ちフィードバック」を分析。良い回答を保持し、悪いものを排除して回答精度を高めます。</p>
+            <p>質問ログとフィードバック（役に立ったか）を分析。良回答を保存・学習し、不要なものを削除して精度を自律向上させます。</p>
           </div>
         </div>
         
         <div class="closing-statement">
-          <p>Seibi: 製造現場のダウンタイムをゼロにし、組織の保全力と稼働率を最大化するソリューション</p>
+          <p>Seibi: 製造現場 of ダウンタイムをゼロにし、組織の保全力と稼働率を最大化するソリューション</p>
         </div>
       </div>
     </section>

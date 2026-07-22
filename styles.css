@@ -142,7 +142,7 @@ body {
 
 /* Common Text Elements */
 .slide-title {
-  font-size: 2.1rem;
+  font-size: 1.95rem;
   line-height: 1.25;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -657,4 +657,104 @@ kbd {
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* Custom 8-Slide Styles */
+.background-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.welding-demo-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.demo-card-header {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #e5e7eb;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.75rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  color: #9ca3af;
+}
+
+.stat-val {
+  font-weight: 600;
+}
+
+.val-danger {
+  color: #ef4444;
+}
+
+.val-warning {
+  color: #f59e0b;
+}
+
+.progress-bar-light {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-fill-light {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-fill-light.fill-danger {
+  background: linear-gradient(90deg, #f87171, #ef4444);
+}
+
+.progress-fill-light.fill-warning {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.predictive-action {
+  margin-top: 1.5rem;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.action-title {
+  font-weight: 600;
+  color: #60a5fa;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.predictive-action p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  margin: 0;
 }
