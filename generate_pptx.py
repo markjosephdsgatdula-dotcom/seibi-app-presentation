@@ -98,11 +98,11 @@ def create_presentation():
     p_sub2.space_before = Pt(5)
 
     # ==========================================
-    # SLIDE 2: 1. 背景と課題 (The Background)
+    # SLIDE 2: 背景と課題 (The Background)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "1. 背景と課題")
+    add_slide_header(slide, "背景と課題")
     
     # Left Content - The Problem
     left_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(5.5), Inches(4.5))
@@ -135,17 +135,56 @@ def create_presentation():
     p_right.space_after = Pt(20)
     
     opportunities = [
-        "⚠️ 繰り返す不具合の放置: 不具合が再発しても個人の記憶に頼るしかなく、不具合が修理されたかを追跡する仕組みもない。",
+        "⚠️ 繰り返す不具合の放置: 不具合が再発しても個人の記憶に頼るしかなく、不具合が実際に修理されたかを追跡する仕組みもない。",
         "⚠️ マニュアル参照の非効率: 修理中に手順を確認したい場合、分厚い紙マニュアルをめくるか周りに聞くしかない。"
     ]
     add_bullets(tf_right, opportunities)
 
     # ==========================================
-    # SLIDE 3: 2. 解決策 (1) 点検業務のデジタル化: モバイル入力 (Digitalization)
+    # SLIDE 3: 解決策と取り組み (Separator Agenda Slide)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (1) 点検業務のデジタル化")
+    
+    # Large Section Title
+    title_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.5), Inches(11.833), Inches(1.5))
+    tf = title_box.text_frame
+    tf.word_wrap = True
+    p = tf.paragraphs[0]
+    p.text = "解決策と取り組み"
+    p.font.name = FONT_TITLE
+    p.font.size = Pt(44)
+    p.font.bold = True
+    p.font.color.rgb = ACCENT_BLUE
+    
+    # Topic List
+    list_box = slide.shapes.add_textbox(Inches(0.75), Inches(3.2), Inches(11.833), Inches(3.0))
+    tf_list = list_box.text_frame
+    tf_list.word_wrap = True
+    
+    agenda_solutions = [
+        "1. 点検業務のデジタル化",
+        "2. リアルタイムの状況共有と管理",
+        "3. AI搭載の修理サポート機能"
+    ]
+    for idx, item in enumerate(agenda_solutions):
+        if idx == 0:
+            p_item = tf_list.paragraphs[0]
+        else:
+            p_item = tf_list.add_paragraph()
+        p_item.text = item
+        p_item.font.name = FONT_BODY
+        p_item.font.size = Pt(22)
+        p_item.font.bold = True
+        p_item.font.color.rgb = TEXT_LIGHT
+        p_item.space_after = Pt(20)
+
+    # ==========================================
+    # SLIDE 4: 解決策：点検業務のデジタル化 (Digitalization)
+    # ==========================================
+    slide = prs.slides.add_slide(blank_layout)
+    set_background(slide)
+    add_slide_header(slide, "解決策：点検業務のデジタル化")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
@@ -169,11 +208,11 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
         
     # ==========================================
-    # SLIDE 4: 2. 解決策 (1-追加) 検索可能な履歴ログ (History)
+    # SLIDE 5: 解決策：検索可能な履歴ログ (History)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (1-追加) 検索可能な履歴ログ")
+    add_slide_header(slide, "解決策：検索可能な履歴ログ")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
@@ -197,11 +236,11 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
 
     # ==========================================
-    # SLIDE 5: 2. 解決策 (2) リアルタイム状況共有と管理 (Notice Board)
+    # SLIDE 6: 解決策：状況共有と管理 (Notice Board)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (2) 状況共有と管理")
+    add_slide_header(slide, "解決策：状況共有と管理")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
@@ -226,11 +265,11 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
 
     # ==========================================
-    # SLIDE 6: 2. 解決策 (3) AI搭載の修理サポート機能 (AI Manuals)
+    # SLIDE 7: 解決策：AI修理サポート (AI Manuals)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "2. 解決策 (3) AI修理サポート")
+    add_slide_header(slide, "解決策：AI修理サポート")
     
     desc_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(4.5), Inches(4.5))
     tf_desc = desc_box.text_frame
@@ -245,7 +284,7 @@ def create_presentation():
     
     bullets = [
         "💬 自然言語でのスマート質問: 紙マニュアルをめくる代わりに、普段の言葉で質問可能（例：「ワイヤ送給がもたついている」）。",
-        "📖 引用元の提示: AIがマニュアルから関連箇所を読み取り、参照したページや項番を示しながら明確に回答。",
+        "📖 引用元の提示: AIがマニュアルから関連箇所を読み取り、参照したページや項番を示しながら明確な回答。",
         "⚡ トラブル一次対応の迅速化: 直接先輩社員に聞いたり、電話をする手間を省き、その場で即時に一次対処が可能。"
     ]
     add_bullets(tf_desc, bullets)
@@ -255,11 +294,50 @@ def create_presentation():
         slide.shapes.add_picture(img_path, Inches(5.6), Inches(1.6), width=Inches(7.0))
 
     # ==========================================
-    # SLIDE 7: 3. 今後の展望 (1) データ主導のメンテナンス (Predictive Maintenance)
+    # SLIDE 8: 成果と今後の展望 (Separator Agenda Slide)
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "3. 今後の展望 (1) データ主導")
+    
+    # Large Section Title
+    title_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.5), Inches(11.833), Inches(1.5))
+    tf = title_box.text_frame
+    tf.word_wrap = True
+    p = tf.paragraphs[0]
+    p.text = "成果と今後の展望"
+    p.font.name = FONT_TITLE
+    p.font.size = Pt(44)
+    p.font.bold = True
+    p.font.color.rgb = ACCENT_BLUE
+    
+    # Topic List
+    list_box = slide.shapes.add_textbox(Inches(0.75), Inches(3.2), Inches(11.833), Inches(3.0))
+    tf_list = list_box.text_frame
+    tf_list.word_wrap = True
+    
+    agenda_outlook = [
+        "1. データ主導のメンテナンス",
+        "2. AI対応マニュアルの拡大",
+        "3. 使うほど賢くなるAI学習ループ"
+    ]
+    for idx, item in enumerate(agenda_outlook):
+        if idx == 0:
+            p_item = tf_list.paragraphs[0]
+        else:
+            p_item = tf_list.add_paragraph()
+        p_item.text = item
+        p_item.font.name = FONT_BODY
+        p_item.font.size = Pt(22)
+        p_item.font.bold = True
+        p_item.font.color.rgb = TEXT_LIGHT
+        p_item.space_after = Pt(20)
+
+    # ==========================================
+    # SLIDE 9: 今後の展望：データ主導の保全 (Predictive Maintenance)
+    # ==========================================
+    slide = prs.slides.add_slide(blank_layout)
+    set_background(slide)
+    add_slide_header(slide, "今後の展望：データ主導の保全")
     
     # Left Content - Welding Case Study
     left_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(5.5), Inches(4.5))
@@ -300,11 +378,11 @@ def create_presentation():
     add_bullets(tf_right, sim_data)
 
     # ==========================================
-    # SLIDE 8: 3. 今後の展望 (2 & 3) AIマニュアルの拡大 ＆ 使うほど賢くなるAI
+    # SLIDE 10: 今後の展望：AI機能の高度化
     # ==========================================
     slide = prs.slides.add_slide(blank_layout)
     set_background(slide)
-    add_slide_header(slide, "3. 今後の展望 (2 & 3) AI機能の高度化")
+    add_slide_header(slide, "今後の展望：AI機能の高度化")
     
     box_w = Inches(5.5)
     box_h = Inches(2.2)

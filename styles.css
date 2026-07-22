@@ -758,3 +758,66 @@ kbd {
   line-height: 1.4;
   margin: 0;
 }
+
+/* 6. Section Intro Layout (Agenda/Map) */
+.section-intro-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.section-intro-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.section-intro-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.section-intro-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.section-intro-item:hover {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.section-intro-index {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-intro-text {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #f3f4f6;
+}
