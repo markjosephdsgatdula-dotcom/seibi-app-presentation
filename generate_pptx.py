@@ -285,7 +285,7 @@ def create_presentation():
     tf_right = right_box.text_frame
     tf_right.word_wrap = True
     p_right = tf_right.paragraphs[0]
-    p_right.text = "予防保全の状態監視（シミュレーション値）"
+    p_right.text = "点検履歴分析（過去14日間）"
     p_right.font.name = FONT_TITLE
     p_right.font.size = Pt(20)
     p_right.font.bold = True
@@ -293,9 +293,10 @@ def create_presentation():
     p_right.space_after = Pt(20)
     
     sim_data = [
-        "⚡ コンジットライナー金属粉量: 0.85g [警告値: 0.70g]",
-        "⚠️ ワイヤ送給負荷 (トルク): 14.2 N·m [注意値: 12.0 N·m]",
-        "🔧 推奨アクション: 次の段取り替え時にコンジットライナー交換を推奨 (予測限界まであと24稼働時間)"
+        "🔴 ワイヤ送給のもたつき: 3回検出 [警告基準: 2回以上]",
+        "🟡 ワイヤの滑り: 2回検出 [注意基準: 1回以上]",
+        "⚪ バーンバック (溶け上がり): 1回検出 [注意基準: 2回以上]",
+        "🔧 推奨アクション: 点検記録より「もたつき」「滑り」の再発傾向を検知。金属粉による詰まりを防ぐため、次回の段取り替え時にライナー交換を推奨します。"
     ]
     add_bullets(tf_right, sim_data)
 

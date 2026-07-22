@@ -277,24 +277,30 @@
         <div class="image-col">
           <div class="welding-demo-card">
             <div class="demo-card-header">
-              <i class="fa-solid fa-bolt"></i> 溶接機 状態監視 (シミュレーション値)
+              <i class="fa-solid fa-chart-bar"></i> 溶接機 No.3 点検履歴分析 (過去14日間)
             </div>
             <div class="demo-card-body">
               <div class="stat-row">
-                <span class="stat-label">コンジットライナー金属粉量:</span>
-                <span class="stat-val val-danger">0.85g (警告値 0.70g)</span>
+                <span class="stat-label">ワイヤ送給のもたつき:</span>
+                <span class="stat-val val-danger">3回検出 (警告値 2回)</span>
               </div>
-              <div class="progress-bar-light"><div class="progress-fill-light fill-danger" style="width: 85%"></div></div>
+              <div class="progress-bar-light"><div class="progress-fill-light fill-danger" style="width: 100%"></div></div>
               
               <div class="stat-row" style="margin-top: 1rem;">
-                <span class="stat-label">ワイヤ送給負荷 (トルク):</span>
-                <span class="stat-val val-warning">14.2 N·m (注意値 12.0 N·m)</span>
+                <span class="stat-label">ワイヤの滑り:</span>
+                <span class="stat-val val-warning">2回検出 (注意値 1回)</span>
               </div>
-              <div class="progress-bar-light"><div class="progress-fill-light fill-warning" style="width: 70%"></div></div>
+              <div class="progress-bar-light"><div class="progress-fill-light fill-warning" style="width: 66%"></div></div>
+
+              <div class="stat-row" style="margin-top: 1rem;">
+                <span class="stat-label">バーンバック (溶け上がり):</span>
+                <span class="stat-val">1回検出 (注意値 2回)</span>
+              </div>
+              <div class="progress-bar-light"><div class="progress-fill-light" style="width: 33%; background: rgba(255,255,255,0.2);"></div></div>
 
               <div class="predictive-action">
                 <div class="action-title"><i class="fa-solid fa-wrench"></i> 推奨アクション:</div>
-                <p>次の段取り替え時にコンジットライナー交換を推奨 (予測限界まであと24稼働時間)</p>
+                <p>点検記録より「もたつき」「滑り」の再発傾向を検知。金属粉によるコンジットライナー詰まりを防ぐため、次回の段取り替え時にライナー交換を推奨します。</p>
               </div>
             </div>
           </div>
