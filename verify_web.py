@@ -24,7 +24,7 @@ async def run():
             
             # Slide 2 to 11
             for slide_num in range(2, 12):
-                await page.click('#next-btn')
+                await page.keyboard.press('ArrowRight')
                 await page.wait_for_timeout(2500)  # Wait for animations and videos
                 screenshot_name = f"web_slide_{slide_num}.png"
                 await page.screenshot(path=screenshot_name)
