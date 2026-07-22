@@ -432,6 +432,31 @@ def create_presentation():
         "このアプリは単なる点検表のデジタル化ではありません。現場がより安全に働き、故障を防ぎ、設備を最高の状態で稼働させ続けるためのツールです。"
     ])
     
+    # ==========================================
+    # SLIDE 11: ご清聴ありがとうございました (Closing Slide)
+    # ==========================================
+    slide = prs.slides.add_slide(blank_layout)
+    set_background(slide)
+    
+    # Large Centered Text Box
+    closing_box = slide.shapes.add_textbox(Inches(1.0), Inches(2.5), Inches(11.333), Inches(3.0))
+    tf_closing = closing_box.text_frame
+    tf_closing.word_wrap = True
+    
+    p_close = tf_closing.paragraphs[0]
+    p_close.text = "ご清聴ありがとうございました"
+    p_close.font.name = FONT_TITLE
+    p_close.font.size = Pt(54)
+    p_close.font.bold = True
+    p_close.font.color.rgb = ACCENT_GREEN
+    p_close.space_after = Pt(20)
+    
+    p_sub_close = tf_closing.add_paragraph()
+    p_sub_close.text = "設備管理システム — Seibi"
+    p_sub_close.font.name = FONT_BODY
+    p_sub_close.font.size = Pt(24)
+    p_sub_close.font.color.rgb = TEXT_MUTED
+
     # Save presentation
     output_path = 'seibi_presentation.pptx'
     prs.save(output_path)
