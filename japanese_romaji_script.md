@@ -39,7 +39,7 @@ Sono kekka, omo ni mittsu no kadai ga shoujite imashita:
 
 1. **点検業務のデジタル化と履歴保存**: スマホやタブレットからその場で入力。不具合や点検の履歴がデジタルデータとして蓄積され、いつでも検索可能になりました。
 2. **レイアウトマップによる視覚管理**: ロボットやレギュレーター等の配置と状態を、平面図（マップ）上で直感的に把握できるようにしました。配線ルートや異常箇所が一目でわかります。
-3. **リアルタイムの状況共有とタスク管理**: 異常が入力されると自動で修理タスク化され、全デバイスやLINE WORKSへ即座に通知。報告漏れや未修理を防ぎます。
+3. **リアルタイムの状況共有とタスク管理**: 異常が入力されると自動で修理タスク化され、全デバイスや（田中さんのご協力により連携した）LINE WORKSへ即座に通知。報告漏れや未修理を防ぎます。
 4. **AI搭載の修理サポート機能**: 紙のマニュアルをめくる代わりに、普段の言葉でAIに質問できます。AIが取り込んだマニュアルと知識ベースを参照し、該当ページを示して即座に回答します。
 
 ### 🔤 Romaji:
@@ -47,7 +47,7 @@ Kore-ra no kadai wo kaiketsu suru tame, genba no anzen・hinstu・kadouritsu kou
 
 1. **Tenken gyoumu no dejitaru-ka to rireki hokan**: Sumaho ya taburetto kara sono ba de nyuuryoku. Fuguai ya tenken no rireki ga dejitaru deeta to shite chukuseki sare, itsu demo kensaku kanou ni narimashita.
 2. **Reiauto mappu ni yoru shikaku kanri**: Robotto ya regyureetaa nado no haichi to joutai wo, heimenzu (mappu) jou de chokkan-teki ni haaku dekiru you ni shimashita. Haisen ruuto ya ijou kasho ga hitome de wakarimasu.
-3. **Riaru-taimu no joukyou kyouyuu to tasuku kanri**: Ijou ga nyuuryoku sareru to jidou de shuuri tasuku-ka sare, zen devaisu ya LINE WORKS he sokuza ni tsuuchi. Houkoku-mori ya mi-shuuri wo fusagimasu.
+3. **Riaru-taimu no joukyou kyouyuu to tasuku kanri**: Ijou ga nyuuryoku sareru to jidou de shuuri tasuku-ka sare, zen devaisu ya (Tanaka-san no go-kyouryoku ni yori renkei shita) LINE WORKS he sokuza ni tsuuchi. Houkoku-mori ya mi-shuuri wo fusagimasu.
 4. **AI tousai no shuuri sapooto kinou**: Kami no manyuaru wo mekuru kawari ni, fudan no kotoba de AI ni shitsumon dekimasu. AI ga torikonda manyuaru to chishiki beeshi wo sanshou shi, gaitou peeji wo shimeshite sokuza ni kaitou shimasu.
 
 ---

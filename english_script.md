@@ -28,7 +28,7 @@ To solve these problems, we built the app around four core features:
    A visual layout map displays the physical arrangement and status of equipment (such as robots and regulators). Workers can intuitively locate machines, wiring routes, and status alerts at a glance.
 
 3. **Real-Time Task Sharing & Management**
-   When an abnormality is logged, it automatically becomes a repair task and sends instant notifications across all devices and LINE WORKS, preventing missed reports.
+   When an abnormality is logged, it automatically becomes a repair task and sends instant notifications across all devices and LINE WORKS (thanks to the cooperation of Tanaka-san), preventing missed reports.
 
 4. **AI Repair Support**
    Instead of flipping through paper manuals, workers can ask the AI questions in plain language. The AI reads the uploaded equipment manuals and draws from its internal knowledge base to provide direct answers, complete with exact manual page references.

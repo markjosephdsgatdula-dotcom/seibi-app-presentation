@@ -85,12 +85,12 @@ async def do_wire_map(page):
     await page.wait_for_timeout(2000)
     
     print("Going to Wire Map...")
-    await page.locator(".nav-label", has_text="Wire Map").click()
-    await page.wait_for_timeout(3000)
+    await page.click("#tab-wiremap")
+    await page.wait_for_timeout(2500)
     
-    print("Clicking scheduled inspections...")
-    await page.click("text=点検予定配線")
-    await page.wait_for_timeout(4000)
+    print("Opening Pillar A tile (#wm-eq-pillar-a)...")
+    await page.click("#wm-eq-pillar-a")
+    await page.wait_for_timeout(4500)
 
 async def do_history(page):
     print("Logging in...")
@@ -146,12 +146,8 @@ async def do_manuals(page):
     await page.wait_for_timeout(4000)
 
 async def main():
-    await record_section("dashboard", do_dashboard)
     await record_section("wire_map", do_wire_map)
-    await record_section("history", do_history)
-    await record_section("bulletin", do_bulletin)
-    await record_section("manuals", do_manuals)
-    print("\nAll videos recorded successfully!")
+    print("\nWire Map video recorded successfully!")
 
 if __name__ == '__main__':
     asyncio.run(main())
