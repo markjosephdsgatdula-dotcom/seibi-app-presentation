@@ -171,10 +171,10 @@ body {
 }
 
 .main-subtitle {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #475569;
-  max-width: 800px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  max-width: 900px;
   line-height: 1.4;
 }
 
@@ -221,18 +221,22 @@ body {
 .problem-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.8rem;
   flex-grow: 1;
+  align-items: center;
 }
 
 .problem-card {
   background: #f8fafc;
   border: 1px solid #cbd5e1;
-  border-radius: 18px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 3.5rem 2rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
 }
 
@@ -243,29 +247,23 @@ body {
 }
 
 .card-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   background: #dbeafe;
   color: #2563eb;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .problem-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.85rem;
   color: #0f172a;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-}
-
-.problem-card p {
-  font-size: 1.05rem;
-  color: #475569;
-  line-height: 1.65;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 /* 3. Split Layout (Text + Visual) */
@@ -286,30 +284,30 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 .bullet-list li {
   display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
+  align-items: center;
+  gap: 1.4rem;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  padding: 1.2rem 1.4rem;
-  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  border-radius: 18px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .list-num {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #2563eb;
   background: #dbeafe;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -319,19 +317,13 @@ body {
 .list-text {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
 }
 
 .list-text strong {
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   color: #0f172a;
-  font-weight: 700;
-}
-
-.list-text span {
-  font-size: 1rem;
-  color: #475569;
-  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: -0.3px;
 }
 
 .visual-col {
@@ -496,19 +488,23 @@ body {
 .value-card {
   background: #f8fafc;
   border: 1px solid #cbd5e1;
-  border-radius: 18px;
-  padding: 2.2rem;
+  border-radius: 20px;
+  padding: 3rem 2.2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .value-card-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
 
@@ -516,16 +512,9 @@ body {
 .accent-color-green { background: #d1fae5; color: #059669; }
 
 .value-card h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   color: #0f172a;
-  margin-bottom: 0.8rem;
-}
-
-.value-card p {
-  font-size: 1.05rem;
-  color: #475569;
-  line-height: 1.6;
 }
 
 .closing-statement {
@@ -629,4 +618,4 @@ body {
 with open("styles.css", "w", encoding="utf-8") as f:
     f.write(light_css)
 
-print("Updated styles.css to high-contrast Light Theme successfully.")
+print("Updated styles.css for bold, large text cards without subtext successfully.")

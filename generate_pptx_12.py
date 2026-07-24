@@ -22,8 +22,6 @@ def create_presentation_12():
     TEXT_MUTED = RGBColor(71, 85, 105)       # Muted Text #475569
     ACCENT_BLUE = RGBColor(37, 99, 235)      # Primary Blue #2563eb
     ACCENT_GREEN = RGBColor(5, 150, 105)     # Emerald Green #059669
-    ACCENT_DANGER = RGBColor(220, 38, 38)     # Warning Red #dc2626
-    ACCENT_AMBER = RGBColor(217, 119, 6)      # Amber Yellow #d97706
     
     FONT_TITLE = 'Noto Sans JP'
     FONT_BODY = 'Noto Sans JP'
@@ -59,9 +57,10 @@ def create_presentation_12():
             p_item = tf.add_paragraph()
             p_item.text = item
             p_item.font.name = FONT_BODY
-            p_item.font.size = Pt(17)
+            p_item.font.size = Pt(22)
+            p_item.font.bold = True
             p_item.font.color.rgb = TEXT_DARK
-            p_item.space_after = Pt(12)
+            p_item.space_after = Pt(20)
 
     # ==========================================
     # SLIDE 1: Title Slide
@@ -114,31 +113,24 @@ def create_presentation_12():
     card_h = Inches(4.5)
     
     problems = [
-        ("📁 履歴の散逸", "手書きの点検表は提出後に保管または破棄され、検索可能なデジタル記録が残らない状態でした。"),
-        ("🔄 追跡の困難", "同じトラブルが繰り返し発生しても記憶に頼るしかなく、発見された異常が確実に修理されたか確認できませんでした。"),
-        ("📖 作業の非効率", "トラブル対応時に紙のマニュアルを探してめくるか、特定の人に質問するしか選択肢がありませんでした。")
+        "📁 履歴の散逸",
+        "🔄 追跡の困難",
+        "📖 作業の非効率"
     ]
     
-    for idx, (p_title, p_desc) in enumerate(problems):
+    for idx, p_title in enumerate(problems):
         left_pos = Inches(0.75 + idx * 3.94)
-        c = slide.shapes.add_textbox(left_pos, Inches(1.8), card_w, card_h)
+        c = slide.shapes.add_textbox(left_pos, Inches(2.2), card_w, card_h)
         tf_c = c.text_frame
         tf_c.word_wrap = True
         
         p = tf_c.paragraphs[0]
         p.text = p_title
         p.font.name = FONT_TITLE
-        p.font.size = Pt(20)
+        p.font.size = Pt(28)
         p.font.bold = True
         p.font.color.rgb = ACCENT_BLUE
-        p.space_after = Pt(14)
-        
-        p_sub = tf_c.add_paragraph()
-        p_sub.text = p_desc
-        p_sub.font.name = FONT_BODY
-        p_sub.font.size = Pt(16)
-        p_sub.font.color.rgb = TEXT_DARK
-        p_sub.line_spacing = 1.4
+        p.alignment = PP_ALIGN.CENTER
 
     # ==========================================
     # SLIDE 3: 解決策と取り組み (Solutions Intro)
@@ -173,7 +165,7 @@ def create_presentation_12():
         set_background(s)
         add_header(s, title, subtitle)
         
-        left_box = s.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(5.8), Inches(5.0))
+        left_box = s.shapes.add_textbox(Inches(0.75), Inches(2.2), Inches(5.8), Inches(4.5))
         tf_left = left_box.text_frame
         tf_left.word_wrap = True
         add_bullets(tf_left, bullets)
@@ -188,8 +180,8 @@ def create_presentation_12():
         "解決策：点検業務のデジタル化",
         "モバイル端末でその場入力・ペーパーレス化",
         [
-            "📱 現場でのモバイル入力: スマホやタブレットから直接点検表を入力。転記ミスや紛失を防止します。",
-            "☁️ 検索可能な履歴の蓄積: 点検データや過去の不具合履歴がクラウドへ保存され、いつでも検索可能です。"
+            "📱 現場でのモバイル入力",
+            "☁️ 検索可能な履歴の蓄積"
         ],
         "app_dashboard.png"
     )
@@ -201,21 +193,21 @@ def create_presentation_12():
         "解決策：検索可能な履歴ログ",
         "過去の不具合や修理記録を瞬時に検索",
         [
-            "🔍 即座のキーワード検索: 日付や設備名、症状を入力するだけで、過去の修理履歴をその場で参照できます。",
-            "📊 再発トラブルの把握: 過去にどんな対応をしたかが可視化され、熟練者に頼らず迅速な対応を可能にします。"
+            "🔍 即座のキーワード検索",
+            "📊 再発トラブルの把握"
         ],
         "app_history.png"
     )
 
     # ==========================================
-    # SLIDE 6: 解決策：レイアウトマップによる視覚管理 [RESTORED]
+    # SLIDE 6: 解決策：レイアウトマップによる視覚管理
     # ==========================================
     add_split_slide(
         "解決策：レイアウトマップによる視覚管理",
         "平面図上で設備配置と配線ルートを直感的に把握",
         [
-            "🗺️ インタラクティブマップ: ロボットやレギュレーター等の配置や異常ステータスを、マップ上で一目に視認可能。",
-            "🔌 配線ルートの可視化: 機器をタップするだけで配線系統を表示し、トラブル箇所の特定をスピード化。"
+            "🗺️ インタラクティブマップ",
+            "🔌 配線ルートの可視化"
         ],
         "app_wire_map.png"
     )
@@ -227,8 +219,8 @@ def create_presentation_12():
         "解決策：状況共有と管理",
         "自動タスク登録とLINE WORKS通知で連絡漏れを防止",
         [
-            "🔔 自動タスク化＆通知: 異常「あり」と回答されると自動で修理タスクが登録され、LINE WORKSへ即座に緊急通知されます。",
-            "🔄 全デバイス同期: 修理の進捗状況や掲示板の内容が、すべてのデバイス（モバイル・PC）へリアルタイムに同期されます。"
+            "🔔 自動タスク化＆通知",
+            "🔄 全デバイス同期"
         ],
         "app_bulletin.png"
     )
@@ -240,8 +232,8 @@ def create_presentation_12():
         "解決策：AI修理サポート",
         "現場ですぐに頼れるAIアドバイザー機能",
         [
-            "🤖 普段の言葉で質問応答: マニュアルをめくる代わりに、自然な言葉でトラブル症状を質問できます。",
-            "📄 明確な引用元ページ提示: AIは取り込んだマニュアルを参照し、根拠となるページや項番を示して回答します。"
+            "🤖 普段の言葉で質問応答",
+            "📄 明確な引用元ページ提示"
         ],
         "app_manuals.png"
     )
@@ -279,12 +271,12 @@ def create_presentation_12():
     set_background(slide)
     add_header(slide, "今後の展望：データ主導の保全", "点検ログの傾向から故障を予測し未然防止")
     
-    left_box = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), Inches(5.8), Inches(5.0))
+    left_box = slide.shapes.add_textbox(Inches(0.75), Inches(2.2), Inches(5.8), Inches(4.5))
     tf_left = left_box.text_frame
     tf_left.word_wrap = True
     add_bullets(tf_left, [
-        "⚡ 溶接機ログの予兆検知: 点検表の「ワイヤ送給のもたつき」や「滑り」の頻度から、ライン停止のサインを検知。",
-        "🛠️ 予測交換によるダウンタイムゼロ: ライナーの詰まりや駆動部の摩耗期を特定し、次回段取り時に交換してトラブルを防止。"
+        "⚡ 溶接機ログの予兆検知",
+        "🛠️ 予測交換によるダウンタイムゼロ"
     ])
     
     right_box = slide.shapes.add_textbox(Inches(6.8), Inches(1.8), Inches(5.7), Inches(5.0))
@@ -315,29 +307,25 @@ def create_presentation_12():
     box_w = Inches(5.7)
     box_h = Inches(2.2)
     
-    c1 = slide.shapes.add_textbox(Inches(0.75), Inches(1.8), box_w, box_h)
+    c1 = slide.shapes.add_textbox(Inches(0.75), Inches(2.2), box_w, box_h)
     tf1 = c1.text_frame
     tf1.word_wrap = True
     p1 = tf1.paragraphs[0]
     p1.text = "📚 AI対応マニュアルの拡大"
     p1.font.name = FONT_TITLE
-    p1.font.size = Pt(20)
+    p1.font.size = Pt(24)
     p1.font.bold = True
     p1.font.color.rgb = ACCENT_BLUE
-    p1.space_after = Pt(10)
-    add_bullets(tf1, ["工場内のすべての主要設備の手順書・図面データをAIへ順次取り込み、全域をサポート可能にします。"])
     
-    c2 = slide.shapes.add_textbox(Inches(6.8), Inches(1.8), box_w, box_h)
+    c2 = slide.shapes.add_textbox(Inches(6.8), Inches(2.2), box_w, box_h)
     tf2 = c2.text_frame
     tf2.word_wrap = True
     p2 = tf2.paragraphs[0]
     p2.text = "🔄 使うほど賢くなるAI学習ループ"
     p2.font.name = FONT_TITLE
-    p2.font.size = Pt(20)
+    p2.font.size = Pt(24)
     p2.font.bold = True
     p2.font.color.rgb = ACCENT_GREEN
-    p2.space_after = Pt(10)
-    add_bullets(tf2, ["質問ログとフィードバック（役に立ったか）を分析。良回答を保存・学習し、精度を向上させます。"])
     
     c3 = slide.shapes.add_textbox(Inches(0.75), Inches(4.5), Inches(11.833), Inches(1.8))
     tf3 = c3.text_frame
@@ -378,7 +366,7 @@ def create_presentation_12():
     # Save presentation
     output_path = 'seibi_presentation.pptx'
     prs.save(output_path)
-    print(f"12-Slide PowerPoint created successfully at: {output_path}")
+    print(f"Bold 12-Slide PowerPoint created successfully at: {output_path}")
 
 if __name__ == '__main__':
     create_presentation_12()
