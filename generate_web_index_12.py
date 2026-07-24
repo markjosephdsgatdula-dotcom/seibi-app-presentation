@@ -42,7 +42,7 @@ html_content = """<!DOCTYPE html>
       <div class="slide-content title-layout">
         <div class="title-badge"><i class="fa-solid fa-industry"></i> 現場改善プロジェクト報告</div>
         <h1 class="main-title">Seibi</h1>
-        <p class="main-subtitle">設備点検・不具合管理アプリのご紹介</p>
+        <p class="main-subtitle">点検のデジタル化からAIによる修理サポートまで</p>
         <div class="title-divider"></div>
         <p class="presenter-tag"><i class="fa-solid fa-user-gear"></i> 溶接ラインチーム</p>
       </div>

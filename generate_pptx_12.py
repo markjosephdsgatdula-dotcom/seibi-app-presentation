@@ -90,7 +90,7 @@ def create_presentation_12():
     p1.space_after = Pt(10)
     
     p2 = tf.add_paragraph()
-    p2.text = "設備点検・不具合管理アプリのご紹介"
+    p2.text = "点検のデジタル化からAIによる修理サポートまで"
     p2.font.name = FONT_BODY
     p2.font.size = Pt(26)
     p2.font.bold = True
