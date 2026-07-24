@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+light_css = """/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -624,3 +624,9 @@ body {
   background: #2563eb;
   transition: width 0.4s ease;
 }
+"""
+
+with open("styles.css", "w", encoding="utf-8") as f:
+    f.write(light_css)
+
+print("Updated styles.css to high-contrast Light Theme successfully.")

@@ -11,7 +11,7 @@ def create_visual_presentation():
     
     blank_layout = prs.slide_layouts[6]  # Blank slide layout
     
-    for i in range(1, 12):
+    for i in range(1, 13):
         img_path = f"web_slide_{i}.png"
         if os.path.exists(img_path):
             slide = prs.slides.add_slide(blank_layout)

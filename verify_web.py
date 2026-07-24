@@ -22,8 +22,8 @@ async def run():
             await page.screenshot(path='web_slide_1.png')
             print("Captured Slide 1: web_slide_1.png")
             
-            # Slide 2 to 11
-            for slide_num in range(2, 12):
+            # Slide 2 to 12
+            for slide_num in range(2, 13):
                 await page.keyboard.press('ArrowRight')
                 await page.wait_for_timeout(2500)  # Wait for animations and videos
                 screenshot_name = f"web_slide_{slide_num}.png"
